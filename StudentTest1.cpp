@@ -155,7 +155,7 @@ TEST_CASE("Fraction == comparison operator") {
     Fraction b(1, 4);
     Fraction c(2, 4); // Equivalent to 1/2
     Fraction d(1, 4);
-
+    
     CHECK(b == d); // Pure equality
     CHECK(a == c); // Reduced equality
     CHECK_FALSE(a == b);

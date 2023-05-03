@@ -3,6 +3,7 @@
 #include "sources/Fraction.hpp"
 #include <limits>
 #include <vector>
+#include <iostream>
 
 using namespace std;
 using namespace ariel;
@@ -629,6 +630,10 @@ TEST_SUITE("Input and output operators tests") {
         ss.str("");
         Fraction neg_frac{-7, 9};
         ss << neg_frac;
+        int num = neg_frac.getNumerator();
+        int den = neg_frac.getDenominator();
+        cout << "num =  "<< num <<endl;
+        cout << "den =  "<< den <<endl;
         CHECK(ss.str() == "-7/9");
 
         // Numerator is positive and denominator is negative
