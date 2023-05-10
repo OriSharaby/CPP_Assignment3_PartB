@@ -94,11 +94,11 @@ namespace ariel{
         int num;
         if(stream >> num){
             if (stream >> fraction.denominator){
-                if (fraction.denominator < 0 && num < 0){
+                if(num > 0 && fraction.denominator < 0){
                 fraction.denominator = fraction.denominator * (-1);
                 fraction.numerator = num * (-1);
                 }
-                else if(num > 0 && fraction.denominator < 0){
+                else if(fraction.denominator < 0 && num < 0){
                 fraction.denominator = fraction.denominator * (-1);
                 fraction.numerator = num * (-1);
                 }
